@@ -27,7 +27,7 @@ pool.getConnection((err, connection) => {
 });
 
 // GET endpoint to fetch data
-app.get("/", (req, res) => {
+app.get("/data-get", (req, res) => {
   const sqlQuery = "SELECT * FROM users";
 
   pool.getConnection((err, connection) => {

@@ -53,17 +53,17 @@ app.get("/data-get", (req, res) => {
 
 // POST endpoint to insert new data
 app.post("/data-post", (req, res) => {
-  const { NAME, AGE, CITY } = req.body;
+  const { username, email} = req.body;
 
-  if (!NAME || !AGE || !CITY) {
+  if (!username || !email ) {
     res
       .status(400)
       .json({ error: "Missing required fields in the request body" });
     return;
   }
 
-  const sqlInsert = "INSERT INTO users (NAME, AGE, CITY) VALUES (?, ?, ?)";
-  const values = [NAME, AGE, CITY];
+  const sqlInsert = "INSERT INTO users (username, email) VALUES (?, ?)";
+  const values = [username, email];
 
   pool.getConnection((err, connection) => {
     if (err) {

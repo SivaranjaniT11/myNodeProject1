@@ -13,7 +13,6 @@ const pool = mysql.createPool({
   database: "cruddb", // Replace with your actual database name
 });
 
-// Checking the database connection
 pool.getConnection((err, connection) => {
   if (err) {
     console.error("Error connecting to MySQL database:", err);

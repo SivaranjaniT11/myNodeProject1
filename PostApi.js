@@ -59,7 +59,7 @@ app.post("/data-post", (req, res) => {
     res
       .status(400)
       .json({ error: "Missing required fields in the request body" });
-    return;
+    return; 
   }
 
   const sqlInsert = "INSERT INTO users (username, email) VALUES (?, ?)";

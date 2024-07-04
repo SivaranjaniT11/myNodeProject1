@@ -106,14 +106,14 @@ const cors = require("cors");
 const app = express();
 const port = 3000;
 
-// CORS configuration
-const corsOptions = {
-  origin: 'http://localhost:3001', // Allow only this origin
-  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
-};
+// // CORS configuration
+// const corsOptions = {
+//   origin: 'http://localhost:3001', // Allow only this origin
+//   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+// };
 
-// Use CORS middleware
-app.use(cors(corsOptions));
+// // Use CORS middleware
+// app.use(cors(corsOptions));
 
 const pool = mysql.createPool({
   connectionLimit: 10,

@@ -130,8 +130,6 @@ pool.getConnection((err, connection) => {
     console.error("Error connecting to MySQL database:", err);
   } else {
     console.log("Connected to MySQL database");
-
-    // Release the connection
     connection.release();
   }
 });
@@ -166,9 +164,7 @@ app.post("/data-post", (req, res) => {
   const { username, email } = req.body;
 
   if (!username || !email) {
-    res
-      .status(400)
-      .json({ error: "Missing required fields in the request body" });
+    res.status(400).json({ error: "Missing required fields in the request body" });
     return; 
   }
 

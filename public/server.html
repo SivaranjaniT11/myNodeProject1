@@ -1,0 +1,25 @@
+<!-- public/server.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Test</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Socket.IO Client Test</h1>
+  <p id="status">Connecting...</p>
+
+  <script>
+    const socket = io();
+
+    socket.on("connect", () => {
+      document.getElementById("status").innerText = "Connected with ID: " + socket.id;
+    });
+
+    socket.on("disconnect", () => {
+      document.getElementById("status").innerText = "Disconnected";
+    });
+  </script>
+</body>
+</html>

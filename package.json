@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon PostApi.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,8 +16,13 @@
     "dotenv": "^16.4.5",
     "express": "^4.18.3",
     "express-handlebars": "^7.1.2",
+    "fs-extra": "^11.3.0",
+    "multer": "^1.4.5-lts.1",
     "mysql": "^2.18.1",
-    "mysql2": "^3.9.2"
+    "mysql2": "^3.9.2",
+    "path": "^0.12.7",
+    "socket.io": "^4.8.0",
+    "ssh2-sftp-client": "^11.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
